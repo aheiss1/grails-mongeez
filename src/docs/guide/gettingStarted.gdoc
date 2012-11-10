@@ -1,4 +1,4 @@
-h4. First, install the plugin by adding a dependency in @BuildConfig.groovy@ (replace VERSION with the desired version:
+h4. First, install the plugin by adding a dependency in @BuildConfig.groovy@ (replace VERSION with the desired version):
 
 {code}
 plugins {
