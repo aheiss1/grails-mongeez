@@ -52,6 +52,11 @@ class MongeezGrailsPlugin {
         )
         def updateOnStart = application.config?.grails?.mongeez?.updateOnStart ?: false
         changeSetFileProvider(ReflectionsChangeSetFileProvider)
+        'grails.mongeez.MongeezController'(grails.mongeez.MongeezController) { bean ->
+            bean.scope = 'prototype'
+            bean.autowire = 'byName'
+            mongo = ref(mongoBeanName)
+        }
         mongeez(MongeezRunner) {
             executeEnabled = updateOnStart
             mongo = ref(mongoBeanName)
