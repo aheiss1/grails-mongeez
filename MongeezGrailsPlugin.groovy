@@ -18,7 +18,7 @@ import grails.plugin.mongeez.ReflectionsChangeSetFileProvider
 import org.mongeez.MongeezRunner
 
 class MongeezGrailsPlugin {
-    def version = "0.2.0-SNAPSHOT"
+    def version = "0.2.0"
     def grailsVersion = "2.0.1 > *"
     def dependsOn = [:]
     def loadAfter = ['mongodb']
