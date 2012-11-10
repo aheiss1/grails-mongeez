@@ -17,6 +17,13 @@ plugins {
 The repository is currently needed because the plugin currently depends on a snapshot version of [Mongeez|https://github.com/secondmarket/mongeez].  It is expected that the need to configure a snapshot repository will be eliminated in a future release.
 {note}
 
+h4. Configuration
+
+At a minimum, the plugin needs to know how to connect to your database.  If you use the
+[MongoDB GORM|http://grails.org/plugin/mongodb] plugin, it should use the same database configuration.  Otherwise, it
+will attempt to use intelligent defaults.  See [Configuration|guide:configuration] for instructions on how to
+override the defaults.
+
 h4. Changelog Creation
 
 Next, you'll need to create some changelogs.  Currently two formats are supported; JavaScript or XML.  The Javascript
