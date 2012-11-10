@@ -14,10 +14,23 @@
  * limitations under the License.
  */
 
+// Make the migrations available on the classpath when using run-app
 eventPackagingEnd = {
     def srcPath = config.grails?.mongeez?.changelogLocation ?: 'grails-app/migrations'
     def src = new File(buildSettings.baseDir, srcPath)
     def target = new File(buildSettings.resourcesDir, 'migrations')
+    if (src.exists()) {
+        ant.sync(toDir: target, overwrite: true) {
+            fileset(dir: src, includes: "**/*.xml,**/*.js")
+        }
+    }
+}
+
+// Make the migrations available on the classpath when packaged as a WAR
+eventCreateWarStart = { name, stagingDir ->
+    def srcPath = config.grails?.mongeez?.changelogLocation ?: 'grails-app/migrations'
+    def src = new File(buildSettings.baseDir, srcPath)
+    def target = new File(stagingDir, 'WEB-INF/classes/migrations')
     if (src.exists()) {
         ant.sync(toDir: target, overwrite: true) {
             fileset(dir: src, includes: "**/*.xml,**/*.js")
