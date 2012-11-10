@@ -1,0 +1,11 @@
+The Mongeez plugin helps you manage changes to your [MongoDB|http://www.mongodb.org/] database while developing Grails
+applications.  It does so by leveraging the [Mongeez|https://github.com/secondmarket/mongeez] library.
+
+Mongeez facilitates structure to the process of applying migrations to a database.  You create a set of changelog files
+(each of which contains one or more changesets identified by an author and an ID), optionally organized in directories.
+When Mongeez updates your database, it keeps track of which changesets have already been run on the database, and won't
+re-run them again unless you've specifically told it to.
+
+Users used to using Mongeez directly may notice that this plugin doesn't mention a "mongeez.xml" file that lists
+changelog files.  That's because the plugin doesn't use one.  Instead, the change log files are automatically detected
+and ran in order by name (taking both directory and file name into account).

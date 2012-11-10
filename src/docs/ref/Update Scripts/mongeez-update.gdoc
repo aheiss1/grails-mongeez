@@ -1,0 +1,16 @@
+h1. mongeez-update
+
+h2. Purpose
+
+Updates a database to the current version.
+
+h2. Description
+
+Runs all un-run change sets. Executes against the configured database for the current environment (defaults to @dev@).
+
+Usage:
+{code}
+grails [environment] mongeez-update
+{code}
+
+Arguments: _none_.

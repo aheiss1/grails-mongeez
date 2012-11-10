@@ -1,0 +1,11 @@
+h4. Autorun on start
+
+Since Mongeez maintains a record of which changesets have been applied, you can avoid manually updating the database by
+taking advantage of the plugin's auto-run feature. By default this is disabled, but you can enable it by adding a
+setting to to Config.groovy:
+
+{code}
+grails.mongeez.updateOnStart = true
+{code}
+
+This is more commonly used for development and QA environments than in production.

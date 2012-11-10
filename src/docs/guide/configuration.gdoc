@@ -1,0 +1,11 @@
+There are a few configuration properties available.  Most can be left with the default setting.  In particular, if you
+use the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin, you shouldn't need to set either the mongoBean or
+databaseName properties.
+
+{table}
+*Property* | *Default* | *Meaning*
+grails.mongeez.changelogLocation | @grails-app/migrations@ | the folder containing the changelog files (either .js or .xml); directories are supported
+grails.mongeez.updateOnStart | @false@ | if @true@ then an update will be performed on application startup
+grails.mongeez.mongoBean | @mongoBean@/ @mongo@ | the Spring bean name of the Mongo  database connection to use; defaults to @mongoBean@ if the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin is installed, @mongo@ otherwise
+grails.mongeez.databaseName | _application name_/ see notes | the name of the database to use; also checks grails.mongo.databaseName (as used by the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin) and mongo.databaseName, falling back to the name of the application if none of the three properties are present
+{table}

@@ -1,0 +1,47 @@
+h4. First, install the plugin by adding a dependency in @BuildConfig.groovy@ (replace VERSION with the desired version:
+
+{code}
+plugins {
+   ...
+   runtime ':mongeez:VERSION'
+}
+{code}
+
+or install with @install-plugin@:
+
+{code}
+grails install-plugin mongeez
+{code}
+
+h4. Changelog Creation
+
+Next, you'll need to create some changelogs.  Currently two formats are supported; JavaScript or XML.  The Javascript
+format is recommended, as it's closer to writing plain MongoDB migration scripts.  Documentation of the XML format can
+be found [here|https://github.com/secondmarket/mongeez/wiki/How-to-use-mongeez].  By default, changelog files go in
+@grails-app/migrations@.
+
+When using the JavaScript format, start each file with a comment "//mongeez formatted javascript".  Then add one or more
+changeset sections, with a "//changeset AUTHOR:ID" comment at the start of each changeset.  Replace AUTHOR with some
+way to identify the creator of the changeset and replace ID with an identifier for the changeset.  If you want a
+changeset to be run every update (rather than only once), include "runAlways:true" in the changeset comment.
+
+For example:
+{code}
+//mongeez formatted javascript
+//changeset bob:1
+db.TestCollection.insert({"someField1": "firstChangeSetData"});
+//changeset bob:2
+db.TestCollection.update({}, {$set: {"someField2": "secondChangeSetData"}}, false, true);
+//changeset alice:3 runAlways:true
+db.TestCollection.update({"someField1": {$exists: 1}}, {$set: {"someField1": "thirdChangeSetData"}}, false, true);
+{code}
+
+Some people like to use sequential integers as the IDs for theier changesets within a file.  Others prefer a descriptive
+string.  Either is fine; all that matters is that the combination of the author, ID, and file path uniquely identifies
+the changeset.  It isn't truly mandatory to track the author; if desired, you can use a placeholder value like
+"UNASCRIBED"; just be aware that there's more potential for ID conflict in this case.
+
+Once you have some changesets, you can run the [mongeez-update|Update Scripts] script to update the database
+{code}
+grails mongeez-update
+{code}
