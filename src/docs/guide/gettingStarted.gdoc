@@ -7,12 +7,6 @@ plugins {
 }
 {code}
 
-or install with @install-plugin@:
-
-{code}
-grails install-plugin mongeez
-{code}
-
 h4. Changelog Creation
 
 Next, you'll need to create some changelogs.  Currently two formats are supported; JavaScript or XML.  The Javascript
