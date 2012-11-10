@@ -1,0 +1,10 @@
+syntax: glob
+.idea
+grails-mongeez-*.zip
+grails-mongeez-*.zip.sha1
+out
+plugin.xml
+target
+*.iml
+*.orig
+*.tld
