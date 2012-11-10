@@ -9,7 +9,7 @@ repositories {
 }
 plugins {
     ...
-    runtime ':mongeez:VERSION'
+    compile ':mongeez:VERSION'
 }
 {code}
 
