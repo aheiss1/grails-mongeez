@@ -1,6 +1,6 @@
 Below is the history of Mongeez plugin releases.
 
-h4. 0.2.1 (TBD)
+h4. 0.2.1 (November 11, 2012)
 * Removed need for snapshot repository ( "#3":https://bitbucket.org/davidmc24/grails-mongeez/issue/3/ )
 * Updated mongeez to 0.9.2
 * Updated mongo-java-driver to 2.9.3
