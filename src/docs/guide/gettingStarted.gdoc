@@ -18,9 +18,10 @@ override the defaults.
 
 h4. Changelog Creation
 
-Next, you'll need to create some changelogs.  Currently two formats are supported; JavaScript or XML.  The Javascript
-format is recommended, as it's closer to writing plain MongoDB migration scripts.  Documentation of the XML format can
-be found [here|https://github.com/secondmarket/mongeez/wiki/How-to-use-mongeez].  By default, changelog files go in
+Next, you'll need to create some changelogs.  Currently two formats are supported; JavaScript or XML.  The
+[Javascript format|https://github.com/secondmarket/mongeez/wiki/JavaScript-Change-Log-Format] is recommended, as it's
+closer to writing plain MongoDB migration scripts.  Documentation of the XML format can be found
+[here|https://github.com/secondmarket/mongeez/wiki/How-to-use-mongeez].  By default, changelog files go in
 @grails-app/migrations@.
 
 When using the JavaScript format, start each file with a comment "//mongeez formatted javascript".  Then add one or more
