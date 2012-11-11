@@ -3,19 +3,11 @@ h4. Installation
 Install the plugin by adding the following to your @BuildConfig.groovy@ (replace @VERSION@ with the desired version):
 
 {code}
-repositories {
-    ...
-    mavenRepo 'https://oss.sonatype.org/content/repositories/snapshots'
-}
 plugins {
     ...
     compile ':mongeez:VERSION'
 }
 {code}
-
-{note}
-The repository is currently needed because the plugin currently depends on a snapshot version of [Mongeez|https://github.com/secondmarket/mongeez].  It is expected that the need to configure a snapshot repository will be eliminated in a future release.
-{note}
 
 h4. Configuration
 

@@ -22,10 +22,9 @@ grails.project.dependency.resolution = {
     repositories {
         grailsCentral()
         mavenCentral()
-        mavenRepo('https://oss.sonatype.org/content/repositories/snapshots')
     }
     dependencies {
-        compile('org.mongeez:mongeez:0.9.2-SNAPSHOT') {
+        compile('org.mongeez:mongeez:0.9.2') {
             excludes('commons-logging')
         }
         compile('org.reflections:reflections:0.9.8')
