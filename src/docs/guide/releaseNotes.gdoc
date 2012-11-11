@@ -1,5 +1,7 @@
 Below is the history of Mongeez plugin releases.
 
+h4. 0.2.1 (TBD)
+
 h4. 0.2.0 (November 10, 2012)
 * First public release
 * Fixed: WAR doesn't include migrations ( "#1":https://bitbucket.org/davidmc24/grails-mongeez/issue/1/ )
