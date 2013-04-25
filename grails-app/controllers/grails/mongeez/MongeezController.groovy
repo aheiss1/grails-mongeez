@@ -17,6 +17,7 @@
 package grails.mongeez
 
 import com.mongodb.BasicDBObject
+import com.mongodb.DBObject
 import com.mongodb.QueryBuilder
 import java.text.SimpleDateFormat
 import org.apache.commons.lang.time.DateFormatUtils
@@ -80,7 +81,8 @@ class MongeezController {
         def dbColl = getMongeezCollection()
         def query = QueryBuilder.start('type').is('changeSetExecution').get()
         // TODO: get a single way to determine the true order of existing executions... finer grained date
-        def changeSetExecutions = dbColl.find(query).sort(new BasicDBObject([date: 1, resourcePath: 1])).toArray()
+        def sort = new BasicDBObject([date: 1, resourcePath: 1])
+        def changeSetExecutions = dbColl.find(query).sort((DBObject)sort).toArray()
         def dateFormatter = DateFormatUtils.ISO_DATETIME_TIME_ZONE_FORMAT
         def datePattern = dateFormatter.getPattern()
         def dateParser = new SimpleDateFormat(datePattern)
