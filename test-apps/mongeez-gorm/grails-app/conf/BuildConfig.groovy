@@ -1,7 +1,5 @@
 grails.project.work.dir = "target"
 
-grails.plugin.location.mongeez='../..'
-
 grails.project.dependency.resolution = {
     inherits("global")
 
@@ -11,12 +9,10 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
     }
-    dependencies {
-        compile('org.mongeez:mongeez:0.9.3')
-    }
 
     plugins {
         runtime ":mongodb:1.2.0"
+        runtime ":mongeez:0.2.2-SNAPSHOT"
         build ":tomcat:$grailsVersion"
     }
 }
