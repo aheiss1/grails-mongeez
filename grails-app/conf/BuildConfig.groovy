@@ -24,7 +24,7 @@ grails.project.dependency.resolution = {
         mavenCentral()
     }
     dependencies {
-        compile('org.mongeez:mongeez:0.9.2') {
+        compile('org.mongeez:mongeez:0.9.3') {
             excludes('commons-logging')
         }
         compile('org.reflections:reflections:0.9.8')

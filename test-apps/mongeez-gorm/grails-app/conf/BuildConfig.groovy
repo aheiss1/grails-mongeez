@@ -11,6 +11,9 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
     }
+    dependencies {
+        compile('org.mongeez:mongeez:0.9.3')
+    }
 
     plugins {
         runtime ":mongodb:1.2.0"
