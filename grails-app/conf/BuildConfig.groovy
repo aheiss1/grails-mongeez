@@ -28,7 +28,7 @@ grails.project.dependency.resolution = {
             excludes('commons-logging')
         }
         compile('org.reflections:reflections:0.9.8')
-        compile('org.mongodb:mongo-java-driver:2.9.3')
+        compile('org.mongodb:mongo-java-driver:2.11.1')
     }
     plugins {
         build(":tomcat:$grailsVersion",
