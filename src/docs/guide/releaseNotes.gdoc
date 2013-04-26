@@ -1,5 +1,8 @@
 Below is the history of Mongeez plugin releases.
 
+h4. 0.2.2 (TBD)
+* Fixed an incompatibility with GMongo ( "Pull Request #1":https://bitbucket.org/commercehub_oss/grails-mongeez/pull-request/1/clarify-runtime-type-of-argument-to/diff )
+
 h4. 0.2.1 (November 11, 2012)
 * Removed need for snapshot repository ( "#3":https://bitbucket.org/davidmc24/grails-mongeez/issue/3/ )
 * Updated mongeez to 0.9.2
