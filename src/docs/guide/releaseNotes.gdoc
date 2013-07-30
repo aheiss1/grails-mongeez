@@ -1,6 +1,8 @@
 Below is the history of Mongeez plugin releases.
 
-h4. 0.2.2 (TBD)
+h4. 0.2.3 (TBD)
+
+h4. 0.2.2 (July 30, 2013)
 * Fixed an incompatibility with GMongo ( "Pull Request #1":https://bitbucket.org/commercehub_oss/grails-mongeez/pull-request/1/clarify-runtime-type-of-argument-to/diff )
 * Updated mongeez to 0.9.3 for MongoDB 2.4 support
 * Updated mongo-java-driver to 2.11.2
