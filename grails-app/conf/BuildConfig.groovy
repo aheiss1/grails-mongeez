@@ -27,7 +27,9 @@ grails.project.dependency.resolution = {
         compile('org.mongeez:mongeez:0.9.3') {
             excludes('commons-logging')
         }
-        compile('org.apache.commons:commons-lang3:3.1') // TODO: remove this when mongeez fixes their POM
+        // TODO: remove this when mongeez fixes their POM
+        // https://github.com/secondmarket/mongeez/pull/30
+        compile('org.apache.commons:commons-lang3:3.1')
         compile('org.reflections:reflections:0.9.8')
         compile('org.mongodb:mongo-java-driver:2.11.2')
     }
