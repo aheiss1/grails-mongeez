@@ -36,8 +36,8 @@ class MongeezGrailsPlugin {
 
     def documentation = "http://davidmc24.bitbucket.org/grails-mongeez"
     def license = "APACHE"
-    def issueManagement = [ url: "https://bitbucket.org/davidmc24/grails-mongeez/issues?status=new&status=open" ]
-    def scm = [ url: "https://bitbucket.org/davidmc24/grails-mongeez" ]
+    def issueManagement = [ url: "https://github.com/commercehub-oss/grails-mongeez/issues" ]
+    def scm = [ url: "https://github.com/commercehub-oss/grails-mongeez" ]
 
     def doWithSpring = {
         def mongoBeanName = (
