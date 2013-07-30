@@ -13,7 +13,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         runtime ":mongodb:1.2.0"
-        runtime ":mongeez:0.2.2-SNAPSHOT"
+        runtime ":mongeez:0.2.3-SNAPSHOT"
         build ":tomcat:$grailsVersion"
     }
 }
