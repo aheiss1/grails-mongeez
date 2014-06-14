@@ -1,5 +1,7 @@
 Below is the history of Mongeez plugin releases.
 
+h4. 0.2.4 (TBD)
+
 h4. 0.2.3 (June 14, 2014)
 * Added support for MongoDB authentication ( "Issue #1":https://github.com/commercehub-oss/grails-mongeez/issues/1 )
 * Updated mongeez to 0.9.4
