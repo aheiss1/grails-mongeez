@@ -8,4 +8,6 @@ grails.mongeez.changelogLocation | @grails-app/migrations@ | the folder containi
 grails.mongeez.updateOnStart | @false@ | if @true@ then an update will be performed on application startup
 grails.mongeez.mongoBean | @mongoBean@/ @mongo@ | the Spring bean name of the Mongo  database connection to use; defaults to @mongoBean@ if the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin is installed, @mongo@ otherwise
 grails.mongeez.databaseName | _application name_/ see notes | the name of the database to use; also checks grails.mongo.databaseName (as used by the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin) and mongo.databaseName, falling back to the name of the application if none of the three properties are present
+grails.mongeez.username | @null@/ see notes | the username to authenticate with; also checks grails.mongo.username (as used by the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin) and mongo.username, falling back to not authenticating if none of the three properties are present
+grails.mongeez.password | @null@/ see notes | the password to authenticate with; also checks grails.mongo.password (as used by the [MongoDB GORM|http://grails.org/plugin/mongodb] plugin) and mongo.password, falling back to not authenticating if none of the three properties are present
 {table}

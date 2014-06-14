@@ -50,6 +50,18 @@ class MongeezGrailsPlugin {
                     application.config?.mongo?.databaseName ?:
                         application.metadata.getApplicationName()
         )
+        def username = (
+            application.config?.grails?.mongeez?.username ?:
+                application.config?.grails?.mongo?.username ?:
+                    application.config?.mongo?.username ?:
+                        null
+        )
+        def password = (
+            application.config?.grails?.mongeez?.password ?:
+                application.config?.grails?.mongo?.password ?:
+                    application.config?.mongo?.password ?:
+                        null
+        )
         def updateOnStart = application.config?.grails?.mongeez?.updateOnStart ?: false
         changeSetFileProvider(ReflectionsChangeSetFileProvider)
         mongeezService(grails.mongeez.MongeezService) { bean ->
@@ -61,6 +73,8 @@ class MongeezGrailsPlugin {
             executeEnabled = updateOnStart
             mongo = ref(mongoBeanName)
             dbName = databaseName
+            userName = username
+            passWord = password
             changeSetFileProvider = ref('changeSetFileProvider')
         }
     }
