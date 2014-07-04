@@ -26,7 +26,6 @@ grails.project.dependency.resolution = {
     dependencies {
         compile('org.mongeez:mongeez:0.9.4')
         compile('org.reflections:reflections:0.9.8')
-        compile('org.mongodb:mongo-java-driver:2.11.2')
     }
     plugins {
         build(":tomcat:$grailsVersion",
