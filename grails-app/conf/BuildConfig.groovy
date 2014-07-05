@@ -26,6 +26,7 @@ grails.project.dependency.resolution = {
     dependencies {
         compile('org.mongeez:mongeez:0.9.4')
         compile('org.reflections:reflections:0.9.8')
+        compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.46.0')
     }
     plugins {
         build(":tomcat:$grailsVersion",
