@@ -20,7 +20,6 @@ import com.mongodb.BasicDBObject
 import com.mongodb.DBObject
 import com.mongodb.QueryBuilder
 import org.apache.commons.lang.time.DateFormatUtils
-import org.mongeez.MongeezRunner
 import org.mongeez.dao.MongeezDao
 import org.mongeez.reader.ChangeSetReaderFactory
 
@@ -56,10 +55,6 @@ class MongeezService {
             }
         }
         return pendingChangeSets
-    }
-
-    def runMongeez() {
-        ((MongeezRunner)mongeez).execute()
     }
 
     def getChangeSetExecutions() {
