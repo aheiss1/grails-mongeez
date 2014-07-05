@@ -1,6 +1,10 @@
 Below is the history of Mongeez plugin releases.
 
-h4. 0.2.4 (TBD)
+h4. 0.2.5 (TBD)
+
+h4. 0.2.4 (July 5, 2014)
+* Fixed: Plugin v0.2.3 causes a runtime Grails ClassNotFoundException (Grails v2.4.0) ("#5":https://github.com/commercehub-oss/grails-mongeez/issues/5 )
+* Removed explicitly defined dependency on mongo-java-driver.  Allow dependency resolution of mongo-java-driver through Mongeez
 
 h4. 0.2.3 (June 14, 2014)
 * Added support for MongoDB authentication ( "Issue #1":https://github.com/commercehub-oss/grails-mongeez/issues/1 )
